@@ -1,0 +1,266 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenRDC" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="478,2321" sap2010:WorkflowViewState.IdRef="OpenRDC_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="438,2241" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="messages" />
+      <Variable x:TypeArguments="x:Boolean" Name="enter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="C:\Windows\System32\mstsc.exe" sap:VirtualizedContainerService.HintSize="416,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,336" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,258" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'mstsc.exe Remote'" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="10.0.0.24">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7a408cda8357fbb3eac7b13d54f54046" Selector="&lt;wnd app='mstsc.exe' cls='#32770' title='Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="tab" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="tab" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="tab" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="tab" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,116" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="416,652" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="4" RetryInterval="00:00:05">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence sap:VirtualizedContainerService.HintSize="380,478" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="358,354" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Image 'mstsc.exe 10.0.0.24'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='mstsc.exe' cls='TscShellContainerClass' title='10.0.0.24 - Remote Desktop Connection' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
+      </ui:RetryScope.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:RetryScope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="380,528" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="358,404" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="4" RetryInterval="00:00:05">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="336,230" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Boolean" Name="nwIconFound" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ImageFound DisplayName="Image Exists 'mstsc.exe 10.0.0.24'" Found="[nwIconFound]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                    <ui:ImageFound.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALMAAAAUCAYAAADGDQylAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUmSURBVGhD7VhbbxtFFPbv2p8AAhW1IIi4PCCtECAhnnhAlUAgIE1KTVuqkkKg6YWmJbhpKtOGXJw4fUApKCSYCBlVakUiBHYSO7emNPqYq3dmPbPe9SUP1nzSkb2z5zLnzDdnxk7BwaFL4Mjs0DWwknlx8TfkZvKJZWFhEfv7+8KLg8PBwUrmkes3cXehYJWffy3gl8XfmYyNz+LGbS7fXs2gVCoJLw4OBwcrmadyc3i494jInkUeYZd8UlHHJqZnsbKyIrw4OBwcrGSezd/BH8W/0Ds4jWPfTKFvaBL9lyZw/Mo4lpfvYX2tjAcP7jNZK5dwbvQuk2gyZ+GnUkj5WfEsQcc9pIvisWnY/WT9FPSwBt2sz+dWTMNraj4N8qD+af5CvEQB2lUjFdSnaT04immPzLPdMTsHK5lnZucImVfx2okxvH5qFG+ezeCtwRG8feEquU//SQj8bx2ZB2/9FIPMHjwvBrFiIWwX4UcSVYIRVicUXbxkBAujQXztXRFpUof48ZqtURS4T88z+aXv6KZrd8zOwUrm8ckcI/PRoXG88cUIXjp9Hj1nBtAz8Dknc0mQ+T4n84X8HK7MT8ciczpLiOSlyXJKNLtQYbsIP5S8SkxKXD9NxmoEp+RqdeFs8Tlx6xog21A+sYqDZmsUBe7T9w2bmG1+vwMxOwc7mSemGZmP9A3iid5TeIos/KEz/Th8rtfYmb9f+gGjy2PxyEyKQ4/9oIChhRJdUx7HAQmC4qvHNROmJPzQzSLGgxgqWeV3qi/JFP4udcX3dHBF0BZematHaqTlIWElrTonHofnJnSjfGs10ucd+OCbSM67bjMJfb0OFGp9gph0zaSv4JQTOpb6mG0IWszNhIad+cn+k3j65Ak8c7YPz371MV4Y+kDvzILMhb8LTOKSOfq7UniWmP7OugnE+5TswOxoDxYpuDcTPaGTJcVh9to1RPUrfMp3mk/+Tr6y3jFpDtpJJMHJVptTXW423+r86KMv7EI+tJxMCPxovylq8w3FqUEd5zHN9VFRb9NSbgY0JPOh08dxeOAYnvv6I/RcfB8vDx81knnv4S6T+GSmj7LYyjgjr14MjYSqfdJnGU9ZZHlPlp8cql2EzzqShnUFDDlx1Hfmmm2Ub+ZPdi4h4TpSCD07Acy5WOvNiCpjyvGQThybduRmQEMyH/nyEzx//kO8ePk9vHLtXbyaeYeRuVz6p0bmMiHz1tYmKhsbycjMFpMWLpxMh8gsipglxBVc5mN+WiEVhWoX4TNqUTSoHViBlqt5rkbfmp0Kc3ze+QzxNX2xsbTfM7aYEZswjk0bc1NhJfOPhMxLhXvou34N/TeG8enNyyTRi/js1hDm55d0MpMuXa1WsLZWTkhmAjZ5ZdcyHaXwWnJh+6TPnFRBLAoeTz8aVbson9xWzlU/LkNgHSoco/GVyew7bCsR9hFAP3kkQvqiixrnRN9JArI1Ueeixoxr077cJKxkvj2Rw+PH/6FaWccmEfa5WSVSwWZ1Hbs72+xasb29hQoh8sbGOpPEZCaoI0GN4Cbi6fa0a9uPonp9FkvrCsJHbfdQqHYNfCrHqPUHoISiS0ULaZhrpG+tRkRM+Wvx4nQ7utltm1o2AiJEx4/Tma02BK3mZoCVzCMZ/s+ETaZm5pDL38FkLq+ND3+XwerqqvDi4BADjLymzZYMVjLv7OwwUtIum0SoDbV1cIgLdjKGTstmYCWzg0PnoFw/mLTelSkcmR26Bo7MDl0DR2aHLgHwPy3n4WP+r7VhAAAAAElFTkSuQmCC" />
+                    </ui:ImageFound.Image>
+                    <ui:ImageFound.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='mstsc.exe' cls='TscShellContainerClass' title='10.0.0.24 - Remote Desktop Connection' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                    </ui:ImageFound.Target>
+                  </ui:ImageFound>
+                </Sequence>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean" />
+            </ui:RetryScope.Condition>
+          </ui:RetryScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="508,657" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Maximize RDC" sap:VirtualizedContainerService.HintSize="486,533" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="isMaximized" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:UiElementExists DisplayName="Element Exists 'mstsc.exe  BBar'" Exists="[isMaximized]" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" InformativeScreenshot="59fcd9fbbcfdce9c7ad29096a8d0437a" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[Not isMaximized]" sap:VirtualizedContainerService.HintSize="464,263" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,116" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="up" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+              </If.Then>
+            </If>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

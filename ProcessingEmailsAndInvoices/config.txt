@@ -1,0 +1,4 @@
+MailFolder Inbox
+Server 10.0.0.35
+Email rpa5
+Password UIPath1000
